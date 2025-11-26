@@ -1,0 +1,89 @@
+/**
+ * Markdown 콘텐츠 스타일링
+ * react-markdown으로 렌더링된 콘텐츠의 스타일을 정의합니다
+ */
+
+/* Added @reference directive to access Tailwind utilities from globals.css */
+@reference "../../globals.css";
+
+.markdown-content {
+  @apply text-foreground;
+}
+
+/* 헤딩 스타일 */
+.markdown-content h1 {
+  @apply text-3xl font-bold mt-8 mb-4 text-balance;
+}
+
+.markdown-content h2 {
+  @apply text-2xl font-bold mt-6 mb-3 text-balance;
+}
+
+.markdown-content h3 {
+  @apply text-xl font-semibold mt-5 mb-2 text-balance;
+}
+
+/* 단락 */
+.markdown-content p {
+  @apply mb-4 leading-relaxed text-pretty;
+}
+
+/* 링크 */
+.markdown-content a {
+  @apply text-primary hover:underline;
+}
+
+/* 리스트 */
+.markdown-content ul {
+  @apply list-disc list-inside mb-4 space-y-2;
+}
+
+.markdown-content ol {
+  @apply list-decimal list-inside mb-4 space-y-2;
+}
+
+.markdown-content li {
+  @apply leading-relaxed;
+}
+
+/* 인용구 */
+.markdown-content blockquote {
+  @apply border-l-4 border-primary pl-4 italic my-4 text-muted-foreground;
+}
+
+/* 코드 블록 */
+.markdown-content code {
+  @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.markdown-content pre {
+  @apply bg-muted rounded-lg p-4 overflow-x-auto mb-4;
+}
+
+.markdown-content pre code {
+  @apply bg-transparent p-0;
+}
+
+/* 구분선 */
+.markdown-content hr {
+  @apply border-border my-8;
+}
+
+/* 이미지 */
+.markdown-content img {
+  @apply rounded-lg my-6;
+}
+
+/* 테이블 */
+.markdown-content table {
+  @apply w-full border-collapse mb-4;
+}
+
+.markdown-content th,
+.markdown-content td {
+  @apply border border-border px-4 py-2;
+}
+
+.markdown-content th {
+  @apply bg-muted font-semibold;
+}
